@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Stack from './dataStructure/stack/stack';
+import {CircularQueue, Queue} from './dataStructure/queue/queue';
+import {BinarySearchTree} from './dataStructure/tree/binarySearchTree';
+import {SingleLinkedList} from './dataStructure/linkedList/singlyLinkedList';
+import {DoublyLinkedList} from './dataStructure/linkedList/doublyLinkedList';
+import {HashTableSeparateChaining} from './dataStructure/hashTable/hashTableSeparateChaining';
 
 function App() {
+
+  const hashTable = new HashTableSeparateChaining(6)
+
+  hashTable.insert(113, 'takk')
+  hashTable.insert('number', 'num')
+  hashTable.insert('string', 'string type')
+  hashTable.remove('string')
+  console.log(hashTable)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
